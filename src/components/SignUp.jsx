@@ -18,7 +18,7 @@ export function SignUp({ history }) {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ user: { username, email, about_me, password } }),
+          body: JSON.stringify({ user: { username, email, about_me, password, password_confirmation } }),
         }
       );
       if (response.status >= 400) {
@@ -48,7 +48,7 @@ export function SignUp({ history }) {
         <form onSubmit={onFormSubmit}>
           <label htmlFor="username">Username</label>
           <input
-            type="username"
+            type="text"
             name="username"
             id="username"
             value={username}
@@ -56,7 +56,7 @@ export function SignUp({ history }) {
           />
           <label htmlFor="email">Email</label>
           <input
-            type="email"
+            type="text"
             name="email"
             id="email"
             value={email}
@@ -70,7 +70,7 @@ export function SignUp({ history }) {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <label htmlFor="password_confirmation">Password Confirmation</label>
+          <label htmlFor="password">Password Confirmation</label>
           <input
             type="password"
             name="password_confirmation"
@@ -80,7 +80,7 @@ export function SignUp({ history }) {
           />
           <label htmlFor="about_me">About Me</label>
           <textarea
-            type="about_me"
+            type="test"
             name="about_me"
             id="about_me"
             value={about_me}
