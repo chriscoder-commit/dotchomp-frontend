@@ -2,8 +2,8 @@ import { Route, Switch } from "react-router-dom";
 import { Profile } from "./Profile";
 import { Feed } from "./Feed";
 import { NavBar } from "./NavBar";
-import { SignUp } from "./Feed";
-import { Login } from "./NavBar";
+import { SignUp } from "./SignUp";
+import { Login } from "./Login";
 
 
 function App() {
