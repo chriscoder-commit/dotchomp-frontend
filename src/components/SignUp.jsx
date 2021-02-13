@@ -12,7 +12,7 @@ export function SignUp({ history }) {
     event.preventDefault();
     try {
       const response = await fetch(
-        `${process.env.REACT_APP_BACKEND_URL}/sign-up`,
+        `${process.env.REACT_APP_BACKEND_URL}/auth/sign-up`,
         {
           method: "POST",
           headers: {
@@ -25,7 +25,7 @@ export function SignUp({ history }) {
         throw new Error("incorrect credentials");
       } else {
         const response = await fetch(
-          `${process.env.REACT_APP_BACKEND_URL}/sign-in`,
+          `${process.env.REACT_APP_BACKEND_URL}/auth/sign-in`,
           {
             method: "POST",
             headers: {
@@ -70,7 +70,7 @@ export function SignUp({ history }) {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <label htmlFor="password">Password Confirmation</label>
+          <label htmlFor="password_confirmation">Password Confirmation</label>
           <input
             type="password"
             name="password_confirmation"
@@ -80,7 +80,7 @@ export function SignUp({ history }) {
           />
           <label htmlFor="about_me">About Me</label>
           <textarea
-            type="test"
+            type="text"
             name="about_me"
             id="about_me"
             value={about_me}

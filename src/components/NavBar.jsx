@@ -3,7 +3,7 @@ import { useHistory, Link } from "react-router-dom";
 export function NavBar(props) {
   const history = useHistory();
 
-  function logout(e) {
+  function Logout(e) {
     e.preventDefault();
     localStorage.removeItem("token");
     localStorage.removeItem("instructor");
