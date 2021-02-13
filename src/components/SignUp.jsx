@@ -72,7 +72,7 @@ export function SignUp({ history }) {
           />
           <label htmlFor="password_confirmation">Password Confirmation</label>
           <input
-            type="password_confirmation"
+            type="password"
             name="password_confirmation"
             id="password_confirmation"
             value={password_confirmation}
