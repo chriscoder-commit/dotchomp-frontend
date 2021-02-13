@@ -38,7 +38,9 @@ export function SignUp({ history }) {
         localStorage.setItem("token", jwt);
         history.push("/");
       }
-    } catch (err) {}
+    } catch (err) {
+      console.log(err.message)
+    }
   }
 
   return (

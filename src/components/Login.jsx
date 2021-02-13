@@ -13,7 +13,7 @@ export const Login = ({ history }) => {
     };
     try {
       const response = await fetch(
-        `${process.env.REACT_APP_BACKEND_URL}/sign-in`,
+        `${process.env.REACT_APP_BACKEND_URL}/auth/sign-in`,
         {
           method: "POST",
           headers: {
