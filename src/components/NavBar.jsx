@@ -15,7 +15,7 @@ export function NavBar(props) {
         <nav>
           <Link to="/feed">The Feed</Link>
           <Link to="/profile">Profile</Link>
-          <Link to="/login">Login</Link>
+          <Link to="/sign-in">Login</Link>
           <Link to="/sign-up">Sign Up</Link>
         </nav>
       </>

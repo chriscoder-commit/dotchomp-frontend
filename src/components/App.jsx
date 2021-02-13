@@ -13,7 +13,7 @@ function App() {
         <Route exact path="/profile" component={Profile} />
         <Route exact path="/feed" component={Feed} />
         <Route exact path="/sign-up" component={SignUp} />
-        <Route exact path="/login" component={Login} />
+        <Route exact path="/sign-in" component={Login} />
       </Switch>
       <NavBar />
     </>
