@@ -10,6 +10,8 @@ export function NavBar(props) {
     history.push("/")
   }
   
+
+  // nav bar component
     return (
       <>
         <nav>
