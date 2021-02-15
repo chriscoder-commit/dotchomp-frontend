@@ -18,6 +18,7 @@ export function NavBar(props) {
         <Nav>
           <NavLink to="/feed">The Feed</NavLink>
           <NavLink to="/profile">Profile</NavLink>
+          <NavLink to="/new-recipe">Create Recipe</NavLink>
           <NavLink to="/sign-in">Login</NavLink>
           <NavLink to="/sign-up">Sign Up</NavLink>
           <NavLink to="/" onClick={Logout}>
