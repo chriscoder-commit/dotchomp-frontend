@@ -1,4 +1,5 @@
 import { useHistory, Link } from "react-router-dom";
+import { Nav, NavLink } from "../styles/NavBar";
 
 export function NavBar(props) {
   const history = useHistory();
@@ -14,15 +15,15 @@ export function NavBar(props) {
   // nav bar component
     return (
       <>
-        <nav>
-          <Link to="/feed">The Feed</Link>
-          <Link to="/profile">Profile</Link>
-          <Link to="/sign-in">Login</Link>
-          <Link to="/sign-up">Sign Up</Link>
-          <Link to="/" onClick={Logout}>
+        <Nav>
+          <NavLink to="/feed">The Feed</NavLink>
+          <NavLink to="/profile">Profile</NavLink>
+          <NavLink to="/sign-in">Login</NavLink>
+          <NavLink to="/sign-up">Sign Up</NavLink>
+          <NavLink to="/" onClick={Logout}>
           Logout
-        </Link>
-        </nav>
+        </NavLink>
+        </Nav>
       </>
     )
 }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import {  } from "../styles/AuthForm";
 
 export function SignUp({ history }) {
   const [username, setUsername] = useState("");
