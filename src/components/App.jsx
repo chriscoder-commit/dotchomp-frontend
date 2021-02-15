@@ -4,6 +4,7 @@ import { Feed } from "./Feed";
 import { NavBar } from "./NavBar";
 import { SignUp } from "./SignUp";
 import { Login } from "./Login";
+import { NewRecipe } from "./NewRecipe";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route exact path="/feed" component={Feed} />
         <Route exact path="/sign-up" component={SignUp} />
         <Route exact path="/sign-in" component={Login} />
+        <Route exact path="/new-recipe" component={NewRecipe} />
       </Switch>
       <NavBar />
     </>
