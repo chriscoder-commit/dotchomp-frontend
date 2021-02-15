@@ -41,8 +41,8 @@ export const Login = ({ history }) => {
   return (
     <>
     <LoggedOutNavBar />
-      {errMessage && <span>{errMessage}</span>}
       <div>
+      {errMessage && <span>{errMessage}</span>}
         <form onSubmit={onFormSubmit} className="alignment">
           <label htmlFor="email">Email</label>
           <input
