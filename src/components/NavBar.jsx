@@ -17,6 +17,9 @@ export function NavBar(props) {
           <Link to="/profile">Profile</Link>
           <Link to="/sign-in">Login</Link>
           <Link to="/sign-up">Sign Up</Link>
+          <Link to="/" onClick={Logout}>
+          Logout
+        </Link>
         </nav>
       </>
     )
