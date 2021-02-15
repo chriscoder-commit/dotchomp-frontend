@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Route, Redirect } from "react-router-dom";
-import { NavBar } from "./NavBar";
+import { Nav } from "../styles/NavBar";
 
 export function ProtectedRoute({ exact, path, component }) {
 const [auth, setAuth] = useState(false);
 const [loading, setLoading] = useState(true);
-const [isInstructor, setIsInstructor] = useState(false);
+const [isModerator, setIsModerator] = useState(false);
 
 useEffect(() => {
 async function checkAuthStatus() {
@@ -21,9 +21,9 @@ async function checkAuthStatus() {
     if (response.status >= 400) {
         throw new Error("not authorized");
     } else {
-        const { instructor } = await response.json();
-        if (instructor) {
-        setIsInstructor(true);
+        const { moderator } = await response.json();
+        if (moderator) {
+        setIsModerator(true);
         }
         setAuth(true);
         setLoading(false);
@@ -35,14 +35,14 @@ async function checkAuthStatus() {
 }
 checkAuthStatus();
 }, []);
-console.log(isInstructor);
+console.log(isModerator);
 if (!loading && !auth) {
-return <Redirect to="/login" />;
+return <Redirect to="/sign-in" />;
 } else {
 return (
     !loading && (
     <>
-        <NavBar isInstructor={isInstructor} auth={true} />
+        <Nav isModerator={isModerator} auth={true} />
         <Route exact={exact} path={path} component={component} />
     </>
     )

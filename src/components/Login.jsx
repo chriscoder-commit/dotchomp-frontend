@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { LoggedOutNavBar } from "./LoggedOutNavBar";
 
 
 export const Login = ({ history }) => {
@@ -25,8 +26,11 @@ export const Login = ({ history }) => {
       if (response.status >= 400) {
         throw new Error("incorrect credentials");
       } else {
-        const { jwt } = await response.json();
+        const { jwt, moderator } = await response.json();
         localStorage.setItem("token", jwt);
+        if (moderator) {
+          localStorage.setItem("moderator", moderator);
+        }
         history.push("/");
       }
     } catch (err) {
@@ -36,6 +40,7 @@ export const Login = ({ history }) => {
 
   return (
     <>
+    <LoggedOutNavBar />
       {errMessage && <span>{errMessage}</span>}
       <div>
         <form onSubmit={onFormSubmit} className="alignment">
