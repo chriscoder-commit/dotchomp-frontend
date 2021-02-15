@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { LoggedOutNavBar } from "./LoggedOutNavBar";
 import {  } from "../styles/AuthForm";
 
 export function SignUp({ history }) {
@@ -45,7 +46,7 @@ export function SignUp({ history }) {
 
   return (
     <>
-
+      <LoggedOutNavBar />
       <h1>Sign Up</h1>
         <form onSubmit={onFormSubmit}>
           <label htmlFor="username">Username</label>
