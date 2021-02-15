@@ -14,7 +14,7 @@ import { Secrets } from "./Secrets";
 function App() {
   return (
     <>
-    <NavBar />
+    {/* <NavBar /> */}
       <Switch>
         <ProtectedRoute exact path="/profile" component={Profile} />
         <ProtectedRoute exact path="/secrets" component={Secrets} />
