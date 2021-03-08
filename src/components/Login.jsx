@@ -26,8 +26,9 @@ export const Login = ({ history }) => {
       if (response.status >= 400) {
         throw new Error("incorrect credentials");
       } else {
-        const { jwt, moderator } = await response.json();
+        const { jwt, user, moderator } = await response.json();
         localStorage.setItem("token", jwt);
+        // localStorage.setItem("user", user);
         if (moderator) {
           localStorage.setItem("moderator", moderator);
         }
