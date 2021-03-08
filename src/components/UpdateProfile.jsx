@@ -2,15 +2,15 @@ import React, { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import {} from "../styles/AuthForm";
 
-export function UpdateProfile(props) {
+export function UpdateProfile() {
 const [username, setUsername] = useState("");
 const [about_me, setAboutMe] = useState("");
 const history = useHistory();
-// const { id } = useParams();
+const { id } = useParams();
 // const id = props.match.params.id;
 
-const user = JSON.parse(localStorage.getItem("user"));
-const id = user.id;
+// const user = JSON.parse(localStorage.getItem("user"));
+// const id = user.id;
 
 useEffect(() => {
 fetch(`${process.env.REACT_APP_BACKEND_URL}/auth/profile/${id}`, {
@@ -35,7 +35,7 @@ try {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
     },
     body: JSON.stringify({
-        session: {
+        profile: {
         username: username,
         about_me: about_me,
         },

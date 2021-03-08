@@ -18,7 +18,7 @@ function App() {
       <Switch>
         <ProtectedRoute exact path="/profile" component={Profile} />
         <ProtectedRoute exact path="/secrets" component={Secrets} />
-        <ProtectedRoute exact path="/update-profile" component={UpdateProfile} />
+        <ProtectedRoute exact path="/profile/:id/update" component={UpdateProfile} />
         <ProtectedRoute exact path="/new-recipe" component={NewRecipe} />
         <Route exact path="/feed" component={Feed} />
         <Route exact path="/sign-up" component={SignUp} />
